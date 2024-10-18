@@ -129,7 +129,7 @@ p {
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 40px 0px 40px;
+  margin: 0px 40px 0px 40px;
   padding: 0 40px 0 0;
   background-color: transparent;
   z-index: 12;
@@ -137,8 +137,8 @@ p {
 .nav-1111 a{
   font-family: var(--site-title-font);
   text-decoration: none;
-  color: var(--color-terciario);
-  font-size: 1.3rem;
+  color: var(--color-terciario) !important;
+  font-size: 1.1rem !important;
 }
 
 .nav-1111-left {
@@ -154,6 +154,34 @@ p {
 .nav-1111-right a{
   padding: 0 20px;
 }
+
+/* Menú desplegable al pasar el ratón (hover) */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  background-color: var(--color-secundario);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu hr{
+  color: var(--color-terciario);
+  margin: 5px;
+}
+
+.dropdown-item {
+  margin: 5px 0 !important;
+  font-family: var(--site-paragraph-font) !important;
+}
+
+.dropdown-item:hover {
+  color: #888A8E !important;
+  background-color: transparent !important;
+}
+
 
 @media screen and (max-width: 991px) {
   .nav-1111-right a{
@@ -187,7 +215,7 @@ p {
 @media screen and (max-width: 479px) {
   .nav-1111 {
     display: flex;
-    height: 90px;
+    height: 30px;
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -216,7 +244,7 @@ p {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 90px);
   border-image: fill 0 linear-gradient(#0000, #000);
   overflow: hidden;
 }
@@ -242,6 +270,7 @@ p {
 
 .sec1-cont img {
   width: 30%;
+  margin-top: 100px;
 }
 
 .bottom-header-title {
